@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59F89533-CAE4-4100-8CF6-262E7D2899EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Arenda</RootNamespace>
+    <AssemblyName>Arenda</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Background\Client.cs" />
+    <Compile Include="Background\Contract.cs" />
+    <Compile Include="Background\Flat.cs" />
+    <Compile Include="Background\FlatEvaluation.cs" />
+    <Compile Include="Background\PhoneNumber.cs" />
+    <Compile Include="Controller\ArendaController.cs" />
+    <Compile Include="Front\ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front\ClientLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\ClientLogin.Designer.cs">
+      <DependentUpon>ClientLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front\ClientRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\ClientRegistrationForm.Designer.cs">
+      <DependentUpon>ClientRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front\ContractInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\ContractInfoForm.Designer.cs">
+      <DependentUpon>ContractInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front\ContractRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\ContractRequest.Designer.cs">
+      <DependentUpon>ContractRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front\FlatEvaulationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\FlatEvaulationForm.Designer.cs">
+      <DependentUpon>FlatEvaulationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front\FlatInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\FlatInfoForm.Designer.cs">
+      <DependentUpon>FlatInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front\FlatRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\FlatRegistration.Designer.cs">
+      <DependentUpon>FlatRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Front\ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Front\ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListToFile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Front\ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front\ClientLogin.resx">
+      <DependentUpon>ClientLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front\ClientRegistrationForm.resx">
+      <DependentUpon>ClientRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front\ContractInfoForm.resx">
+      <DependentUpon>ContractInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front\ContractRequest.resx">
+      <DependentUpon>ContractRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front\FlatEvaulationForm.resx">
+      <DependentUpon>FlatEvaulationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front\FlatInfoForm.resx">
+      <DependentUpon>FlatInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front\FlatRegistration.resx">
+      <DependentUpon>FlatRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Front\ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
